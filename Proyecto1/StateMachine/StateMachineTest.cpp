@@ -41,7 +41,7 @@ int sc_main (int argc, char* argv[])
   }
 
   // Assert the transition from B -> D
-  cout << "@" << sc_time_stamp() <<" Asserting transition B -> D\n" << endl;
+  cout << "@" << sc_time_stamp() <<" Asserting transition B -> D -> E -> C\n" << endl;
   key = 'b';
   for (i=0;i<10;i++) {
     clock = 0; 
@@ -51,8 +51,8 @@ int sc_main (int argc, char* argv[])
   }
 
   // Assert the transition from D -> E
-  cout << "@" << sc_time_stamp() <<" Asserting transition D -> E\n" << endl;
-  key = 'b';
+  cout << "@" << sc_time_stamp() <<" Asserting transition C -> B\n" << endl;
+  key = 'a';
   for (i=0;i<10;i++) {
     clock = 0; 
     sc_start(1, SC_NS);

@@ -34,7 +34,7 @@ void bidirectional_counter::decr_count () {
   } else {
     count = count - 1;
     counter_out.write(count);
-    cout << "@" << sc_time_stamp() << " :: Incremental Counter " << counter_out.read() << endl;
+    cout << "@" << sc_time_stamp() << " :: Decrease Counter " << counter_out.read() << endl;
   }
 }
 

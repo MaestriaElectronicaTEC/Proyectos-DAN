@@ -55,7 +55,7 @@ int sc_main (int argc, char* argv[]) {
     sc_start(1, SC_NS);
   }
   cout << "@" << sc_time_stamp() <<" Asserting Mode\n" << endl;
-  enable = 1;  // Assert enable
+  enable = 1;  // Assert mode
   mode = 0;
   for (i=0;i<20;i++) {
     clock = 0; 
@@ -65,6 +65,12 @@ int sc_main (int argc, char* argv[]) {
   }
   cout << "@" << sc_time_stamp() <<" De-Asserting Enable\n" << endl;
   enable = 0; // De-assert enable
+  for (i=0;i<20;i++) {
+    clock = 0; 
+    sc_start(1, SC_NS);
+    clock = 1; 
+    sc_start(1, SC_NS);
+  }
 
   cout << "@" << sc_time_stamp() <<" Terminating simulation\n" << endl;
   sc_close_vcd_trace_file(wf);

@@ -39,6 +39,10 @@ void bidirectional_counter::decr_count () {
 }
 
 void bidirectional_counter::mode_choice() {
+  if (enable.read() == 0) {
+    return;
+  }
+
   if (mode.read() == 1) {
     incr_count();
   } else {

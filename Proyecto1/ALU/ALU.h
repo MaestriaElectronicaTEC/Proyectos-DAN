@@ -29,41 +29,17 @@ SC_MODULE(alu)
 			// Addition
 			case 0:
 				res = dataA + dataB;
-				dataA18[16] = dataA[15];	// Sign copy
-				dataB18[16] = dataB[15];	// Sign copy
-				dataA18[15] = dataA[14];	// Sign copy
-				dataB18[15] = dataB[14];	// Sign copy
-				for(int i = 0; i < 14; i++)
-				{
-					dataA18[i] = dataA[i];
-					dataB18[i] = dataB[i];
-				}
+				dataA18 = (sc_int<17>)dataA;
+				dataB18 = (sc_int<17>)dataB;
 				real_res = dataA18 + dataB18;
-				/*cout << "real_res[0]: " <<  real_res[0] << endl;
-				cout << "real_res[1]: " <<  real_res[1] << endl;
-				cout << "real_res[2]: " <<  real_res[2] << endl;
-				cout << "real_res[3]: " <<  real_res[3] << endl;
-				cout << "real_res[4]: " <<  real_res[4] << endl;
-				cout << "real_res[5]: " <<  real_res[5] << endl;
-				cout << "real_res[6]: " <<  real_res[6] << endl;
-				cout << "real_res[7]: " <<  real_res[7] << endl;
-				cout << "real_res[8]: " <<  real_res[8] << endl;
-				cout << "real_res[9]: " <<  real_res[9] << endl;
-				cout << "real_res[10]: " << real_res[10] << endl;
-				cout << "real_res[11]: " << real_res[11] << endl;
-				cout << "real_res[12]: " << real_res[12] << endl;
-				cout << "real_res[13]: " << real_res[13] << endl;
-				cout << "real_res[14]: " << real_res[14] << endl;
-				cout << "real_res[15]: " << real_res[15] << endl;
-				cout << "real_res[16]: " << real_res[16] << endl;*/
-				carry = (real_res[15] == 1 && real_res[16] == 0) ? true : false;
+				carry = (real_res[15] == 1) ? true : false;
 				if((dataA[15] == dataB[15]) && (dataA[15] != res[15]))
 					overflow = true;
 				break;
 			// Substraction	
 			case 1:
 				res = dataA - dataB;
-				carry = (real_res[16] == 1) ? true : false;
+				carry = (real_res[15] == 1) ? true : false;
 				if((dataA[15] != dataB[15]) && (dataB[15] == res[15]))
 					overflow = true;
 				break;

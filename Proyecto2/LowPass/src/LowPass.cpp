@@ -16,7 +16,7 @@ int sc_main (int argc, char* argv[]) {
 	sca_eln::sca_node vout2;
 
 	WaveSource waveSignal("waveSignal");
-	waveSignal.setFrequency(100000.0);
+	waveSignal.setFrequency(500000.0);
 	waveSignal.tsigout(vin);
 
 	LowPassFilter lpFilter("lpFilter");

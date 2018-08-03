@@ -26,7 +26,7 @@ SC_MODULE(LowPassFilter)
           i_r.p.bind(n1);
           i_r.n.bind(n2);
 
-          i_c.value = 47e-9; // Fc = 1000 kHz
+          i_c.value = 3.3e-10; // Fc = 100 kHz
           i_c.p.bind(n2);
           i_c.n.bind(gnd);
     }

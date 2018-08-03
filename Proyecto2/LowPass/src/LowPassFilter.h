@@ -22,11 +22,11 @@ SC_MODULE(LowPassFilter)
 
     SC_CTOR(LowPassFilter) : i_r("i_r"), i_c("i_c")
     {
-          i_r.value = 1.0;
+          i_r.value = 4700.0;
           i_r.p.bind(n1);
           i_r.n.bind(n2);
 
-          i_c.value = 1.0/(2.0*M_PI*1.0e3);
+          i_c.value = 47e-9; // Fc = 1000 kHz
           i_c.p.bind(n2);
           i_c.n.bind(gnd);
     }

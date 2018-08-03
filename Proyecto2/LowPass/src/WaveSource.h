@@ -12,9 +12,14 @@ SC_MODULE(WaveSource)
 	sca_eln::sca_terminal 	tsigout;
 	sca_eln::sca_vsource 	v_src;
 
+	void setFrequency(double freq)
+	{
+		v_src.frequency = freq;
+	}
+
 	SC_CTOR(WaveSource)
 	:     tsigout("tsigout"),
-		  v_src("v_src",0.0,0.0,2.0,100000),    //100 KHz sinusoidal source with an amplitude of 2V
+		  v_src("v_src",0.0,0.0,2.0,0),    //100 KHz sinusoidal source with an amplitude of 2V
 		  gnd("gnd")
 	{
 		v_src.set_timestep(0.01,sc_core::SC_US);

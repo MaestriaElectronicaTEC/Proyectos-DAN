@@ -29,12 +29,14 @@ void  TemperatureSensor::PROC () {
 			break;
 	}
 
-	/* get the output */
+	/* set the output */
+	oe = 0;
 	neg = (scaled_in<0);
-	digits = (int)scaled_in;
+	digits = (uint) scaled_in;
 	d0 = (uint) digits%10;
 	digits = digits/10;
 	d1 = (uint) digits%10;
 	digits = digits/10;
 	d2 = (uint) digits%10;
+	oe = 1;
 }

@@ -17,6 +17,7 @@ int sc_main (int argc, char* argv[]) {
 	sc_signal <sc_uint<4> > d1;
 	sc_signal <sc_uint<4> > d2;
 	sc_signal <bool> tmp_warn;
+	sc_signal <bool> oe;
 
 	sc_set_time_resolution(10.0, SC_NS);
 
@@ -33,23 +34,17 @@ int sc_main (int argc, char* argv[]) {
 	tempSensor.d1(d1);
 	tempSensor.d2(d2);
 	tempSensor.tmp_warn(tmp_warn);
+	tempSensor.oe(oe);
 
 	Display display("display");
 	display.neg(neg);
 	display.d0(d0);
 	display.d1(d1);
 	display.d2(d2);
+	display.oe(oe);
 
-	sca_util::sca_trace_file *tf1= sca_create_vcd_trace_file("temperatureSensor");
-	sca_util::sca_trace(tf1,sig_sine,"in");
-	sca_util::sca_trace(tf1,mode,"mode");
-	sca_util::sca_trace(tf1,d0,"d0");
-	sca_util::sca_trace(tf1,d1,"d1");
-	sca_util::sca_trace(tf1,d2,"d2");
-	sca_util::sca_trace(tf1,tmp_warn,"tmp_warn");
-
+	mode = 0;
 	sc_core::sc_start(10, SC_MS);
-	sca_util::sca_close_vcd_trace_file(tf1);
 
 	return 0;
 }

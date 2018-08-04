@@ -13,13 +13,14 @@ SC_MODULE(Display)
   sc_in <sc_uint<4> > d0; //LSB
   sc_in <sc_uint<4> > d1;
   sc_in <sc_uint<4> > d2;
+  sc_in <bool> oe;
 
   void  PROC ();
 
   SC_CTOR(Display)
   {
     SC_METHOD (PROC);
-      sensitive << neg << d0 << d1 << d2;
+      sensitive << oe;
   }
 };
 

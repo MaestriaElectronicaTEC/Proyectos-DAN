@@ -17,8 +17,11 @@ SC_MODULE(TemperatureSensor) // Air sensor model using ELN primitive modules
   sc_out <sc_uint<4> > d1;
   sc_out <sc_uint<4> > d2;
   sc_out <bool> tmp_warn;
+  sc_out <bool> oe;
 
   void  PROC ();
+
+
 
   SC_CTOR(TemperatureSensor) // standard constructor
   {

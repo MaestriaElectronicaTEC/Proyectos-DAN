@@ -18,7 +18,6 @@ int sc_main (int argc, char* argv[]) {
 
 	WaveSource wave("waveSource");
 	wave.out(sig_sine);
-	wave.out.set_timestep(100, SC_NS); // The sampling time of the port
 
 	TemperatureSensor tempSensor("tempSensor");
 	tempSensor.in(sig_sine);

@@ -7,6 +7,11 @@
 #include "Display.h"
 
 void  Display::PROC () {
-  cout<<"T= "<<d2.read()<<d1.read()<<d2.read()<<endl;
+  if (neg.read()){
+	  cout<<"T= -"<<d2.read()<<d1.read()<<d2.read()<<endl;
+  }
+  else{
+	  cout<<"T= "<<d2.read()<<d1.read()<<d2.read()<<endl;
+  }
 }
 

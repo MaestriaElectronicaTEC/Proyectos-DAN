@@ -9,6 +9,7 @@
 
 SC_MODULE(Display)
 {
+  sc_in <bool> neg;
   sc_in <sc_uint<4> > d0; //LSB
   sc_in <sc_uint<4> > d1;
   sc_in <sc_uint<4> > d2;
@@ -18,7 +19,7 @@ SC_MODULE(Display)
   SC_CTOR(Display)
   {
     SC_METHOD (PROC);
-      sensitive << d0 << d1 << d2;
+      sensitive << neg << d0 << d1 << d2;
   }
 };
 

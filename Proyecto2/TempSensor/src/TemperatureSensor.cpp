@@ -30,6 +30,7 @@ void  TemperatureSensor::PROC () {
 	}
 
 	/* get the output */
+	neg = (scaled_in<0);
 	digits = (int)scaled_in;
 	d0 = (uint) digits%10;
 	digits = digits/10;

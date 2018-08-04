@@ -12,6 +12,7 @@ SC_MODULE(TemperatureSensor) // Air sensor model using ELN primitive modules
 {
   sca_tdf::sca_in< double > in;
   sc_in <sc_uint<2> > mode;
+  sc_out <bool> neg;
   sc_out <sc_uint<4> > d0; //LSB
   sc_out <sc_uint<4> > d1;
   sc_out <sc_uint<4> > d2;

@@ -12,22 +12,21 @@ void  TemperatureSensor::PROC () {
 	int digits;
 
 	/* Map input to desired range [-40,40]->[-50,260] */
-	double scaled_in = 3.875*in.read()+105;
+	scaled_in = 3.875*in.read()+105;
 
 	/* Rise temperature warning if T > 60°C */
 	tmp_warn = (scaled_in>60);
 
 	/* Convert input */
 	switch(mode.read()) {
-		case 0: //C
-			break;
 		case 1: //K
 			scaled_in +=273;
 			break;
 		case 2: //F
 			scaled_in = 1.8*scaled_in+32;
 			break;
-	    default:
+	    default: //C
+			break;
 	}
 
 	/* get the output */

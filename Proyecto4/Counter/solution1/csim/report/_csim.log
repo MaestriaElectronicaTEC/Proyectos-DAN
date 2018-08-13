@@ -1,0 +1,57 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../../../Proyecto1/Counter/CounterTest.cpp in debug mode
+   Compiling ../../../../../Proyecto1/Counter/Counter.cpp in debug mode
+   Generating csim.exe
+
+        SystemC 2.3.1-Accellera --- Mar  5 2018 14:23:08
+        Copyright (c) 1996-2014 by all Contributors,
+        ALL RIGHTS RESERVED
+Executing new
+@1 ns :: Incremented Counter 0
+
+Info: (I702) default timescale unit used for tracing: 1 ps (counter.vcd)
+@2 ns :: Incremented Counter 1
+@4 ns :: Incremented Counter 2
+@6 ns :: Incremented Counter 3
+@8 ns :: Incremented Counter 4
+@10 ns :: Incremented Counter 5
+@11 ns Asserting reset
+
+@31 ns De-Asserting reset
+
+@31 ns :: Incremented Counter 0
+@32 ns :: Incremented Counter 1
+@34 ns :: Incremented Counter 2
+@36 ns :: Incremented Counter 3
+@38 ns :: Incremented Counter 4
+@40 ns :: Incremented Counter 5
+@41 ns Asserting Mode
+
+@41 ns :: Decrease Counter 6
+@42 ns :: Decrease Counter 5
+@44 ns :: Decrease Counter 4
+@46 ns :: Decrease Counter 3
+@48 ns :: Decrease Counter 2
+@50 ns :: Decrease Counter 1
+@52 ns :: Decrease Counter 0
+@54 ns :: Decrease Counter -1
+@56 ns :: Decrease Counter -2
+@58 ns :: Decrease Counter -3
+@60 ns :: Decrease Counter -4
+@62 ns :: Decrease Counter -5
+@64 ns :: Decrease Counter -6
+@66 ns :: Decrease Counter -7
+@68 ns :: Decrease Counter -8
+@70 ns :: Decrease Counter -9
+@72 ns :: Decrease Counter -10
+@74 ns :: Decrease Counter -11
+@76 ns :: Decrease Counter -12
+@78 ns :: Decrease Counter -13
+@80 ns :: Decrease Counter -14
+@81 ns De-Asserting Enable
+
+@121 ns Terminating simulation
+
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

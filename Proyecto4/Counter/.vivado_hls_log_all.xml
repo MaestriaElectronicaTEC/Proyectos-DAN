@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-35] Protocol 'SC_METHOD' contains conflicting I/O accesses:&#xA;   wire write on port 'counter_out' (../Proyecto1/Counter/Counter.cpp:36->../Proyecto1/Counter/Counter.cpp:49) and wire read on port 'counter_out' (../Proyecto1/Counter/Counter.cpp:37->../Proyecto1/Counter/Counter.cpp:49) occur in the same clock cycle." projectName="Counter" solutionName="solution1" date="2018-08-12T16:22:25.299-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Found reading to uninitialized signal/variable 'bidirectional_counter_count_V'('bidirectional_counte', ../Proyecto1/Counter/Counter.cpp:21->../Proyecto1/Counter/Counter.cpp:47), the signal/variable should be written or reset firstly, or it may introduce RTL simulation mismatch." projectName="Counter" solutionName="solution1" date="2018-08-12T16:22:25.133-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Signal 'bidirectional_counter_count_V' has no reset." projectName="Counter" solutionName="solution1" date="2018-08-12T16:22:25.068-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'counter_out' has no reset." projectName="Counter" solutionName="solution1" date="2018-08-12T16:22:25.020-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Cannot find reset port in module 'bidirectional_counter', an RTL reset port will be automatically inserted." projectName="Counter" solutionName="solution1" date="2018-08-12T16:22:24.935-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

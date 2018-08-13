@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="Counter.cpp" path="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto1/Counter/Counter.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="CounterTest.cpp" path="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto1/Counter/CounterTest.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

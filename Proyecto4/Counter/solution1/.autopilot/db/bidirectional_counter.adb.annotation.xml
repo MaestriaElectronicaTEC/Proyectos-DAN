@@ -1,0 +1,5 @@
+<annotationInfo>
+<item  id="35" filename="../Proyecto1/Counter/Counter.cpp" linenumber="35" name="v_V_2" contextFuncName="decr_count" moduleName="bidirectional_counter::mode_choice" rtlName="v_V_2_fu_114_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto4"&gt;&lt;\/item&gt;
+<item  id="52" filename="../Proyecto1/Counter/Counter.cpp" linenumber="21" name="v_V" contextFuncName="incr_count" moduleName="bidirectional_counter::mode_choice" rtlName="v_V_fu_122_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto4"&gt;&lt;\/item&gt;
+<item  id="18" filename="../Proyecto1/Counter/Counter.h" linenumber="24" name="" contextFuncName="bidirectional_counter" moduleName="bidirectional_counter" rtlName="StgValue_12_bidirectional_counter_mode_choice_fu_52" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto4"><\/item>
+</annotationInfo>

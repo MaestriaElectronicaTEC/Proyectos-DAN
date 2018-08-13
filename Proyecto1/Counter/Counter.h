@@ -30,9 +30,7 @@ SC_MODULE (bidirectional_counter) {
   SC_CTOR(bidirectional_counter) {
     cout<<"Executing new"<<endl;
     SC_METHOD(mode_choice);
-    sensitive << reset;
     sensitive << clock.pos();
-    sensitive << mode;
   } // End of Constructor
 
 }; // End of Module counter

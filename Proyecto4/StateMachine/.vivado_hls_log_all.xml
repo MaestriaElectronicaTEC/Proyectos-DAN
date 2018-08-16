@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Please check and refine your SC_METHOD code." projectName="StateMachine" solutionName="solution1" date="2018-08-15T21:51:40.638-0600" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Scheduling is infeasible for cycle fixed SC_METHOD {StateMachine::getNextState}." projectName="StateMachine" solutionName="solution1" date="2018-08-15T21:51:40.531-0600" type="Warning"/>
+        <logs message="WARNING: [SCHED 204-35] Protocol 'SC_METHOD' contains conflicting I/O accesses:&#xA;   wire read on port 'key' (../Proyecto1/StateMachine/StateMachine.cpp:55) and wire read on port 'key' (../Proyecto1/StateMachine/StateMachine.cpp:59) occur in the same clock cycle." projectName="StateMachine" solutionName="solution1" date="2018-08-15T21:51:39.995-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Port 'current_state' has no reset." projectName="StateMachine" solutionName="solution1" date="2018-08-15T21:51:39.710-0600" type="Warning"/>
+        <logs message="WARNING: [SCA 200-202] Cannot find reset port in module 'StateMachine', an RTL reset port will be automatically inserted." projectName="StateMachine" solutionName="solution1" date="2018-08-15T21:51:39.515-0600" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

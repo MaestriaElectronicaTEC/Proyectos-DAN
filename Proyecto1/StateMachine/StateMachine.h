@@ -17,17 +17,15 @@ SC_MODULE(StateMachine)
 {
   sc_in_clk clock; 
   sc_in<char> key;
-  sc_out<STATE> next_state;
-  sc_out<STATE> current_state;
+  sc_out<sc_int<12> > current_state;
+
+  sc_int<12> _state;
 
   void getNextState();
-  void setState();
 
 SC_CTOR(StateMachine)
 {
   SC_METHOD(getNextState);
-     sensitive << key << clock.pos();
-  SC_METHOD(setState);
-    sensitive << clock.pos();
+     sensitive << clock.pos();
 }
 };

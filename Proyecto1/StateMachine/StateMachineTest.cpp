@@ -4,15 +4,13 @@ int sc_main (int argc, char* argv[])
 {
   sc_signal<bool> 	clock; 
   sc_signal<char> 	key;
-  sc_signal<STATE> 	next_state;
-  sc_signal<STATE> 	current_state;
+  sc_signal<sc_int<12> > 	current_state;
   int i = 0;
 
   //Connect the DUT
   StateMachine stateMachine ("STATE_MACHINE");
     stateMachine.clock(clock);
     stateMachine.key(key);
-    stateMachine.next_state(next_state);
     stateMachine.current_state(current_state);
 
   sc_start(1, SC_NS);
@@ -22,12 +20,10 @@ int sc_main (int argc, char* argv[])
   // Dump the desired signals
   sc_trace(wf, clock, "clock");
   sc_trace(wf, key, "key");
-  sc_trace(wf, next_state, "next_state");
   sc_trace(wf, current_state, "current_state");
 
   // Initialize all variables
   key = '#';			// initial value of key
-  next_state = A_STATE;		// initial value of next_state
   current_state = A_STATE;	// initial value of current_state
 
   // Assert the transition from A -> B

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="StateMachine.cpp" path="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto1/StateMachine/StateMachine.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="StateMachineTest.cpp" path="/home/luis/TEC/DEAN/Proyectos-DAN/Proyecto1/StateMachine/StateMachineTest.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
